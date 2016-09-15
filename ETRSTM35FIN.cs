@@ -1,12 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/*
- * Vector2.x = longitude
- * Vector2.y = latitude
- */
-
-public class ETRSTM35FIN {
+﻿public class ETRSTM35FIN {
 
 	static double Ca = 6378137.0;
 	static double Cf = 1.0 / 298.257223563;
@@ -76,7 +68,6 @@ public class ETRSTM35FIN {
 		double longitude = RadianToDegree(Clo0 + System.Math.Asin(System.Math.Tanh(nnp) / System.Math.Cos(be)));
 
 		return new Geolocation(longitude, latitude);
-
 	}
 
 	public static Geolocation toETRSTM35FIN(Geolocation wgs84) {
@@ -107,8 +98,6 @@ public class ETRSTM35FIN {
 
 		if (!WithinTM35FIN (etrs))
 			return Geolocation.zero;
-
-		Debug.Log (etrs.ToString());
 
 		return etrs;
 	}
