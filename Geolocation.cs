@@ -25,7 +25,7 @@ public class Geolocation {
 		return new Vector2((float)longitude, (float)latitude);
 	}
 
-	public string ToString() {
+	override public string ToString() {
 		return longitude + "," + latitude;
 	}
 }
