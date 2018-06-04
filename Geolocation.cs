@@ -10,6 +10,9 @@ public class Geolocation {
 	public double longitude;
 	public double latitude;
 	static public Geolocation zero = new Geolocation (0, 0);
+	
+	public Geolocation() {
+	}
 
 	public Geolocation(double longitude, double latitude) {
 		this.longitude = longitude;
